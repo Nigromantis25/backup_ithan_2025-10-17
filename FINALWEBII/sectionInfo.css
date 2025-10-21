@@ -1,0 +1,33 @@
+.Informacion{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.info{
+    padding: 10px;
+    flex: 0 1 20%; 
+    box-sizing: border-box; 
+}
+
+.info img {
+    width: 100%; 
+    height: auto; 
+}
+
+/* En pantallas pequeñas (por debajo de 768px) */
+@media (max-width: 768px) {
+    .info {
+        flex: 0 1 calc(50% - 20px); 
+    }
+}
+
+/* En pantallas muy pequeñas (por debajo de 480px) */
+@media (max-width: 480px) {
+    .info {
+        flex: 0 1 100%; 
+    }
+}

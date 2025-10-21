@@ -1,0 +1,37 @@
+# Ignore OS files
+Thumbs.db
+.DS_Store
+
+# PHPStorm / VSCode
+.idea/
+.vscode/
+
+# Logs and runtime
+logs/
+*.log
+
+# Environment files
+.env
+.env.local
+
+# Composer
+/vendor/
+
+# Node
+node_modules/
+
+# Mac
+*.swp
+
+# Windows
+ehthumbs.db
+
+# Build outputs
+dist/
+build/
+
+# PHPStorm
+*.iml
+
+# Composer lock (optional)
+# composer.lock
