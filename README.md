@@ -1,65 +1,99 @@
-# Proyecto IC Norte (backup_ithan_2025-10-17)
+#  Supermercado IC Norte - Proyecto Web
+# Características Principales
 
-Este repositorio contiene una aplicación PHP simple con varias páginas y un carrito de compras.
+-  Carrito de compras interactivo
+-  Chatbot para atención al cliente
+-  Sistema de login con múltiples roles
+-  Diseño moderno y responsivo
+-  Interfaz adaptable a móviles
+-  Panel de administración seguro
 
-Requisitos locales
-- XAMPP (Apache + PHP + MySQL)
-- PHP 7.4+ (preferible 8.x)
+# Tecnologías Utilizadas
+
+- HTML5 & CSS3
+- JavaScript
+- PHP 
 - MySQL
+- Bootstrap 5
+- jQuery
 
-Estructura
-- Archivos PHP en la raíz: `index.php`, `registro.php`, `login_rol.php`, `admin_register.php`, etc.
-- Carpeta `FINALWEBII/` con frontend y scripts JS
+#  Estructura del Proyecto
 
-Pasos para preparar y ejecutar localmente (PowerShell en Windows)
-1) Abrir PowerShell como administrador y arrancar XAMPP (o usar el panel de control de XAMPP).
-
-2) Copiar los archivos a la carpeta de Apache (ya están en `c:\xampp\htdocs\backup_ithan_2025-10-17`).
-
-3) Crear la base de datos y las tablas (ejemplo):
-
-```sql
-CREATE DATABASE icnorte;
-USE icnorte;
-
-CREATE TABLE admin (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  usuario VARCHAR(100) NOT NULL,
-  password VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE empleado (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  usuario VARCHAR(100) NOT NULL,
-  password VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE usuario (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  carnet VARCHAR(50),
-  usuario VARCHAR(100) NOT NULL,
-  password VARCHAR(255) NOT NULL
-);
+```
+backup_ithan_2025-10-17/
+FINALWEBII/              # Frontend principal
+    img/                 # Imágenes y recursos
+   style.css           # Estilos principales
+   carrito.js          # Lógica del carrito
+   index.html          # Página principal
+admin_access.php        # Panel de administración
+login_rol.php          # Sistema de login
+chatbot_api.php        # API del chatbot
+coneccion.php         # Configuración de BD
 ```
 
-4) Editar `coneccion.php` con tus credenciales MySQL.
+##  Características Detalladas
 
-5) Navegar en el navegador a: `http://localhost/backup_ithan_2025-10-17/`.
+- **Carrito de Compras:**
+  - Agregar/eliminar productos
+  - Actualizar cantidades
+  - Cálculo automático del total
+  - Generación de facturas
 
-Inicializar Git y subir a remoto (PowerShell)
+- **Sistema de Usuarios:**
+  - Login para clientes
+  - Panel de administración
+  - Gestión de empleados
+  - Historial de compras
 
-```powershell
-cd c:\xampp\htdocs\backup_ithan_2025-10-17
-git init
-git add .
-git commit -m "Initial commit: proyecto IC Norte backup"
-# Crear el repo remoto en GitHub y reemplazar <REMOTE_URL>
-git remote add origin <REMOTE_URL>
-git branch -M main
-git push -u origin main
-```
+- **Chatbot:**
+  - Respuestas automáticas
+  - FAQs integradas
+  - Asistencia en tiempo real
 
-Notas
-- Vercel no soporta PHP nativamente; usa un hosting que soporte PHP (Render, Heroku buildpack PHP, un VPS o un hosting compartido con Apache/PHP).
-- Si quieres, puedo generar un `composer.json` y scripts para mejorar el proyecto, o ayudarte a crear el repo en GitHub mediante instrucciones o guía paso a paso.
-# IC
+# Instalación y Configuración
+
+1. **Configurar XAMPP:**
+   - Instala XAMPP en tu sistema
+   - Inicia los servicios de Apache y MySQL
+
+3. **Configuración de la Base de Datos:**
+   - Edita `coneccion.php` con tus credenciales:
+   ```php
+   $host = "localhost";
+   $user = "tu_usuario";
+   $password = "tu_contraseña";
+   $database = "icnorte";
+   ```
+
+4. **Acceso al Sistema:**
+   
+
+   - Panel Admin: http://localhost/backup_ithan_2025-10-17/admin_register.php 
+              
+
+# Roles de Usuario
+
+- **Administrador:** Acceso total al sistema
+- **Empleado:** Gestión de productos y ventas
+- **Cliente:** Compras y historial
+
+# Notas Importantes
+
+- Mantén actualizado XAMPP para mejor seguridad
+- Haz respaldos regulares de la base de datos
+- Revisa los logs de error en caso de problemas
+
+#  Contribuciones
+
+¡Las contribuciones son bienvenidas! Si encuentras bugs o tienes sugerencias, por favor:
+1. Haz un fork del proyecto
+2. Crea una rama para tu feature
+3. Haz commit de tus cambios
+4. Envía un pull request
+
+
+
+
+
+# backup_ithan_2025-10-17
